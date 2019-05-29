@@ -1,5 +1,7 @@
 %text = fileread('C:\Users\Mohamed Elshek\Desktop\log.txt');
 %reads a file and turn it to string
+import java.util.*;
+
 
 opts = detectImportOptions('log.txt','Delimiter','.');
 
@@ -49,8 +51,40 @@ for i = 1:height(t)
 end
  
 end
+<<<<<<< HEAD
 a
 b
 c
+=======
+
+a;
+b;
+c;
+
+if(commands(1) == 'Start/callmain')
+        E = Stack();
+        m = 'Main';
+        E.push(m);
+        disp(E)
+        for j = 2:height(t)
+        if (commands(j) == 'Call_a')
+            a = 'a';
+            E.push(a);
+            disp(E)
+        elseif (commands(j) == 'Call_b')
+            b = 'b';
+            E.push(b);
+            disp(E)
+        elseif (commands(j) == 'Call_c')
+            c = 'c';
+            E.push(c);
+            disp(E)
+        elseif (commands(j) == 'Return')
+            E.pop();
+            disp(E)
+        end 
+        end
+end
+>>>>>>> d6f3e04baa9732c2e877403f4c7f453389f51ccf
 
 
