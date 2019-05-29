@@ -19,34 +19,34 @@ callOfa = 0;
 callOfb = 0;
 callOfc = 0;
     
-if(commands(1) == 'Start/callmain')
-for i = 1:height(t)
-   
- 
-    if (commands(i)=='Call_a') 
-      
-      callOfa = callOfa + 1;
-      a.name='event a';
-      a.calledTimes= callOfa;
-      
-    elseif (commands(i)=='Call_b')
-       
-         callOfb = callOfb + 1;
-          b.name='event b';
-      b.calledTimes= callOfb;
-     
-    elseif (commands(i)=='Call_c')
-     
-         callOfc = callOfc + 1;
-          c.name='event c';
-      c.calledTimes= callOfc;
-      
-         
-   
-    end
-
-end
-end
+% if(commands(1) == 'Start/callmain')
+% for i = 1:height(t)
+%    
+%  
+%     if (commands(i)=='Call_a') 
+%       
+%       callOfa = callOfa + 1;
+%       a.name='event a';
+%       a.calledTimes= callOfa;
+%       
+%     elseif (commands(i)=='Call_b')
+%        
+%          callOfb = callOfb + 1;
+%           b.name='event b';
+%       b.calledTimes= callOfb;
+%      
+%     elseif (commands(i)=='Call_c')
+%      
+%          callOfc = callOfc + 1;
+%           c.name='event c';
+%       c.calledTimes= callOfc;
+%       
+%          
+%    
+%     end
+% 
+% end
+% end
 
 a;
 b;
@@ -54,8 +54,8 @@ c;
 
 if(commands(1) == 'Start/callmain')
         E = Stack();
-        m = 'Main';
-        E.push(m);
+        m = 
+        E.push();
         disp(E)
         for j = 2:height(t)
         if (commands(j) == 'Call_a')
