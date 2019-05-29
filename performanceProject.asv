@@ -39,7 +39,8 @@ for i = 1:height(t)
           c.name='event c';
       c.calledTimes= callOfc;
       
-   
+    Mdl = fitctree(t,commands);
+    view(Mdl,'Mode','graph');
    
    
     end
@@ -48,6 +49,12 @@ for i = 1:height(t)
 
 end
  
+end
+for j = 1:height(t)
+    load fisheriris
+    rng(1) % For reproducibility
+    Mdl = TreeBagger(12,t,c);
+
 end
 a
 b
