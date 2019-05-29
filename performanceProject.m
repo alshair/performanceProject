@@ -51,11 +51,12 @@ for i = 1:height(t)
 end
  
 end
-<<<<<<< HEAD
-a
-b
-c
-=======
+for j = 1:height(t)
+    load fisheriris
+    rng(1) % For reproducibility
+    Mdl = TreeBagger(12,t,c);
+
+end
 
 a;
 b;
@@ -85,6 +86,5 @@ if(commands(1) == 'Start/callmain')
         end 
         end
 end
->>>>>>> d6f3e04baa9732c2e877403f4c7f453389f51ccf
 
 
