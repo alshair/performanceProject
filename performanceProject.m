@@ -26,6 +26,7 @@ for i = 1:height(t)
     if (commands(i)=='Call_a') 
       
       callOfa = callOfa + 1;
+      
       a.name='event a';
       a.calledTimes= callOfa;
       
@@ -52,9 +53,12 @@ end
  
 end
 
-a;
-b;
-c;
+
+
+
+a
+b
+c
 
 if(commands(1) == 'Start/callmain')
         E = Stack();
