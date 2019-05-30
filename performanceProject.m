@@ -56,9 +56,11 @@ end
 
 
 
-a
-b
-c
+
+
+a;
+b;
+c;
 
 if(commands(1) == 'Start/callmain')
         E = Stack();
