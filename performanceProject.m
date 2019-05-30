@@ -13,7 +13,11 @@ commands = t{:,1};
 t;
 
 commands = categorical(commands);
-time = categorical(time);
+%time = categorical(time);
+
+
+    
+event = struct('name', {},'time', {}, 'calledTimes',{} ,'inclusiveTime',{} ,'exclusiveTimes', {} );
 
 callOfa = 0;
 callOfb = 0;
@@ -26,47 +30,55 @@ for i = 1:height(t)
     if (commands(i)=='Call_a') 
       
       callOfa = callOfa + 1;
+%       a.name='event a';
+%       a.calledTimes= callOfa;
+
+      event(1).name = 'event a';
+      event(1).calledTimes = callOfa;
       
-      a.name='event a';
-      a.calledTimes= callOfa;
+      for j = 1:(height(t)-1)
+          tt = time(j+1) - time(j);
+          
+      end
+      totalTime = tt;
+      event(1).time= totalTime;
       
     elseif (commands(i)=='Call_b')
        
          callOfb = callOfb + 1;
-          b.name='event b';
-      b.calledTimes= callOfb;
+%           b.name='event b';
+%       b.calledTimes= callOfb;
+        event(2).name = 'event b';
+        event(2).calledTimes = callOfb;
      
     elseif (commands(i)=='Call_c')
      
          callOfc = callOfc + 1;
-          c.name='event c';
-      c.calledTimes= callOfc;
+%           c.name='event c';
+%       c.calledTimes= callOfc;
+
+        event(3).name = 'event c';
+        event(3).calledTimes = callOfc;
       
-   
-   
+         
    
     end
-   
-
 
 end
- 
 end
 
-
-
-
-
-
+event(1)
+event(2)
+event(3)
 a;
 b;
 c;
 
 if(commands(1) == 'Start/callmain')
         E = Stack();
-        m = 'Main';
-        E.push(m);
-        disp(E)
+         m = 'Main';
+         E.push(m);
+         disp(E)
         for j = 2:height(t)
         if (commands(j) == 'Call_a')
             a = 'a';
@@ -87,5 +99,6 @@ if(commands(1) == 'Start/callmain')
         end
 end
 
+    
 
 
